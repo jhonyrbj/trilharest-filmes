@@ -13,6 +13,17 @@ public class Filme {
     private LocalDate inicioExibicao;
     private LocalDate fimExibicao;
 
+    public Filme() {
+    }
+
+    public Filme(UUID id, String nome, String sinopse, Duration duracao, LocalDate inicioExibicao, LocalDate fimExibicao) {
+        this.id = id;
+        this.nome = nome;
+        this.sinopse = sinopse;
+        this.duracao = duracao;
+        this.inicioExibicao = inicioExibicao;
+        this.fimExibicao = fimExibicao;
+    }
 
     public UUID getId() {
         return id;
@@ -60,5 +71,16 @@ public class Filme {
 
     public void setFimExibicao(LocalDate fimExibicao) {
         this.fimExibicao = fimExibicao;
+    }
+
+    public boolean emExibicao(LocalDate referencia) {
+        if (getInicioExibicao() == null || getFimExibicao() == null) {
+            return false;
+        }
+        LocalDate inicio = getInicioExibicao();
+        LocalDate fim = getFimExibicao();
+        boolean hojeDepoisDoInicio = inicio.isEqual(referencia) || inicio.isBefore(referencia);
+        boolean hojeAntesDoInicio = fim.isEqual(referencia) || fim.isAfter(referencia);
+        return hojeDepoisDoInicio && hojeAntesDoInicio;
     }
 }
