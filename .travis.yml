@@ -1,1 +1,8 @@
 language: java
+deploy:
+  api-key:
+    secure: neXHDYhlnOmrxOaLm24Dc+D6nP5tVOSlF0ZFCfJGvqh/WIOFhjdtZB22wLZNQwhOydgQLMxQwWPHSsFzHykFH5sAST+NCmpZlmK2dt+h8DWEjlmDjF1okwo7BILBX3/fRhT2IKMahC3Z+U98TXkw0ue5dCSbL1TQeaUwiHr408ozx4S6n2VXXpWi03pmZNWnuVX8pbncPrTR321qJMr2H8ZnxPDTyUjxfZ/tNRBzS4hsPI3dNWAaFS85207HdB338OrqhMNhF0V6hw9YXWIlxwt0dMf3yNMRDf1OezH2wDLqFpxGtq25i+VlaXCZa2z3r91s1ENzM2LoLV/sZP86A1L7KG4MDLW29zI8g9+V3jreBYYdNeJOx4MQkWBt9ZnCPd9oOnWVLeQqk6mFhKJFOluoNNAeCeTeW7VR0hfik3N+kuxT2uEdAr0IbGIGNzSxaKCKk8HLhSpUHPkwVhzmFC2P+ejYJ0Z54p2x6quB/MFxBe9Jv5M52gsgrD2GZkmy+DadU84jxbkUWrLBwMJ06LuX5lDM3IVHy8mp4HQq0nE5CJVjQwwG7U2k9kTVistOty9+gEKmKvZD4LKllOAdZqgP/DE/U1ice4xNZ9AGizbGdqgOFe//A34WM1tXgYspcDUh/r09lDVobW/i6e61Am//ohhljY7/pA/T8rDr6IQ=
+  provider: heroku
+  app:
+    staging: jrbj-tr-filmes-staging
+    master: jrbj-tr-filmes-production
